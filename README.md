@@ -8,7 +8,9 @@ If you need to send media files to your telegram channel every 30 minutes from 7
   Optional: Get the personal ID of the people you want to connect to the bot (they will only be able to check the number of remaining media)*.
 - Get the name of your Telegram channel.
 - Input all the info you receive into a [.json file](./data.json).
+- Make your bot join your channel.
 - Start the [script](./bot_script.py).
+- Now you can start sending media to the bot or simply place them in the 'media' directory/folder and the bot will start sending media every 30 minutes.
 
 ## Startup requirements:
 - Python 3.11 +
