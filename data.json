@@ -1,0 +1,6 @@
+{
+    "token":"YOUR_TOKEN",
+    "target_user_id": YOUR_USER_ID(000000000),
+    "other_users":[OTHER_USERS_ID(000000000)],
+    "target_chanel":"YOUR_CHANEL_NAME(@your_chanel)"
+}
