@@ -32,6 +32,12 @@ logger = logging.getLogger(__name__)
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
+def is_not_hidden_(file_):
+    return not file_.startswith('.')
+
+def list_non_hidden_(path_):
+    return list(filter(is_not_hidden_, os.listdir(path_)))
+
 
 async def save_media(message: types.Message) -> None:
     if message.from_user.id == TARGET_USER_ID and message.content_type in [ContentType.PHOTO, ContentType.VIDEO]:
@@ -65,7 +71,7 @@ async def send_count(message: types.Message) -> None:
 
 async def send_media():
     logger.info("Trying to send")
-    files = sorted(os.listdir(MEDIA_DIR))
+    files = sorted(list_non_hidden_(MEDIA_DIR))
     if not files:
         await bot(SendMessage(chat_id=TARGET_USER_ID, text='NOTHING TO SEND! UPLOAD MORE MEDIA!'))
         logger.info("Nothing to send!")
