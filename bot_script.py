@@ -65,7 +65,7 @@ async def save_media(message: types.Message) -> None:
 
 async def send_count(message: types.Message) -> None:
     if message.from_user.id in ALLOWED_USERS and message.content_type == ContentType.TEXT:
-        files = os.listdir(MEDIA_DIR)
+        files = list_non_hidden_(MEDIA_DIR)
         await message.answer(f"Files left: {len(files)}")
 
 
