@@ -14,7 +14,7 @@ If you need to send media files to your telegram channel every 30 minutes from 7
 
 ## Startup requirements:
 - Python 3.11 +
-- [aiogram](https://aiogram.dev/) 3.3.0
+- [aiogram](https://aiogram.dev/) 3.15.0
 
 ## Might be helpful:
 [Python virtual environment](https://docs.python.org/3/library/venv.html)
